@@ -234,6 +234,7 @@ return [
 
         'SweetAlert' => UxWeb\SweetAlert\SweetAlert::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

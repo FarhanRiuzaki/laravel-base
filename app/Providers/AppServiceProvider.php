@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $appSetting = Apps::orderBy('created_at', 'DESC')->first();
-
+        
         View::share('appSetting', $appSetting);
     }
 }

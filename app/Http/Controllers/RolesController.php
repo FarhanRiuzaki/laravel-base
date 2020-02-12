@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use DataTables;
+use DebugBar;
 
 class RolesController extends Controller
 {
@@ -31,7 +32,6 @@ class RolesController extends Controller
         }
 
         $roles = Role::orderBy('created_at', 'DESC')->paginate(10);
-        
         return view('roles.index', compact('roles'));
     }
     
