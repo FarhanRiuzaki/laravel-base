@@ -32,6 +32,7 @@ class RolesController extends Controller
         }
 
         $roles = Role::orderBy('created_at', 'DESC')->paginate(10);
+
         return view('roles.index', compact('roles'));
     }
     

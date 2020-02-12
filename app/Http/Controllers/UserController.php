@@ -167,7 +167,7 @@ class UserController extends Controller
         //menggunakan syncRoles agar terlebih dahulu menghapus semua role yang dimiliki
         //kemudian di-set kembali agar tidak terjadi duplicate
         $user->syncRoles($request->role);
-        return redirect()->back()->with(['success' => 'Role Sudah Di Set']);
+        return redirect(route('users.index'))->with(['success' => 'Role Sudah Di Set']);
     }
 
     // Setting User
