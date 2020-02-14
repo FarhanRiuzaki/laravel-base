@@ -38,16 +38,16 @@
         <!-- ============================================================== -->
         <!-- Login box.scss -->
         <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style="background-color: ghostwhite">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style="background-color: rgb(205, 211, 225)">
             <div class="auth-box row">
-                <div class="col-lg-7 col-md-5 modal-bg-img center" style="background-image: url({{asset('storage/images/' . $appSetting->image_login)}});">
-                    <img src="{{asset('storage/images/' . $appSetting->image_header)}}" alt="homepage" class="dark-logo" style="height:60px" />
+                <div class="col-lg-6 col-md-6 modal-bg-img center" style="background-image: url({{asset('storage/images/' . $appSetting->image_login)}});">
+                    {{-- <img src="{{asset('storage/images/' . $appSetting->image_header)}}" alt="homepage" class="dark-logo" style="height:60px" /> --}}
                     {{-- <h1><b>{{$appSetting->name}}</b></h1> --}}
                 </div>
-                <div class="col-lg-5 col-md-7 bg-white">
+                <div class="col-lg-6 col-md-6 bg-white">
                     <div class="p-3">
-                        <h3 class="mt-3 text-center">{{ strtoupper($appSetting->name) }}</h3>
-                        <br>
+                        <h3 class="mt-3 text-dark">Login</h3>
+                        <p>Welcome back, please login to your account.</p>
                         <!-- ACTIONNYA MENGARAH PADA URL /LOGIN -->
                       	<!-- UNTUK MENCARI TAU TUJUAN URI DARI ROUTE NAME DIBAWAH, PADA COMMAND LINE, KETIKKAN PHP ARTISAN ROUTE:LIST DAN CARI URI YANG MENGGUNAKAN METHOD POST -->
                       	<!-- KARENA URI /LOGIN DENGAN METHOD GET DIGUNAKAN UNTUK ME-LOAD VIEW HALAMAN LOGIN -->
@@ -58,7 +58,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="uname">Email</label>
+                                        <label class="text-default" style="font-size: 12px" for="uname">Email</label>
                                         <!-- $errors->has('email') AKAN MENGECEK JIKA ADA ERROR DARI HASIL VALIDASI LARAVEL, SEMUA KEGAGALAN VALIDASI LARAVEL AKAN DISIMPAN KEDALAM VARIABLE $errors -->
                                         <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                                         type="text" 
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="pwd">Password</label>
+                                        <label class="text-default" style="font-size: 12px" for="pwd">Password</label>
                                         <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                                         type="password" 
                                         name="password"
@@ -87,8 +87,10 @@
                                 </div>
                                 @endif
                                 <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn btn-block btn-dark">Sign In</button>
+                                    <button type="submit" class="btn btn-block btn-dark">Login</button>
                                 </div>
+                                <br>
+
                                 <div class="col-lg-12 text-center mt-5">
                                     Don't have an account? <a href="#" class="text-danger">Sign Up</a> <br>
                                     {{-- or <button class="btn btn-link px-0" type="button">Forgot password?</button> --}}

@@ -11,7 +11,7 @@
  Target Server Version : 50729
  File Encoding         : 65001
 
- Date: 12/02/2020 14:34:28
+ Date: 14/02/2020 11:05:52
 */
 
 SET NAMES utf8mb4;
@@ -139,10 +139,10 @@ CREATE TABLE `permissions` (
 -- Records of permissions
 -- ----------------------------
 BEGIN;
-INSERT INTO `permissions` VALUES (2, 'apps-show', 'web', '2020-02-11 14:38:29', '2020-02-11 14:38:29');
-INSERT INTO `permissions` VALUES (3, 'role-show', 'web', '2020-02-11 14:38:39', '2020-02-11 14:38:39');
-INSERT INTO `permissions` VALUES (4, 'role permission-show', 'web', '2020-02-11 14:38:50', '2020-02-11 14:38:50');
-INSERT INTO `permissions` VALUES (5, 'users-show', 'web', '2020-02-11 14:38:59', '2020-02-11 14:38:59');
+INSERT INTO `permissions` VALUES (1, 'apps-show', 'web', '2020-02-11 14:38:29', '2020-02-11 14:38:29');
+INSERT INTO `permissions` VALUES (2, 'role-show', 'web', '2020-02-11 14:38:39', '2020-02-11 14:38:39');
+INSERT INTO `permissions` VALUES (3, 'role permission-show', 'web', '2020-02-11 14:38:50', '2020-02-11 14:38:50');
+INSERT INTO `permissions` VALUES (4, 'users-show', 'web', '2020-02-11 14:38:59', '2020-02-11 14:38:59');
 COMMIT;
 
 -- ----------------------------
@@ -162,13 +162,14 @@ CREATE TABLE `role_has_permissions` (
 -- Records of role_has_permissions
 -- ----------------------------
 BEGIN;
+INSERT INTO `role_has_permissions` VALUES (1, 1);
+INSERT INTO `role_has_permissions` VALUES (2, 1);
 INSERT INTO `role_has_permissions` VALUES (3, 1);
 INSERT INTO `role_has_permissions` VALUES (4, 1);
-INSERT INTO `role_has_permissions` VALUES (5, 1);
+INSERT INTO `role_has_permissions` VALUES (1, 99);
 INSERT INTO `role_has_permissions` VALUES (2, 99);
 INSERT INTO `role_has_permissions` VALUES (3, 99);
 INSERT INTO `role_has_permissions` VALUES (4, 99);
-INSERT INTO `role_has_permissions` VALUES (5, 99);
 COMMIT;
 
 -- ----------------------------
@@ -182,7 +183,7 @@ CREATE TABLE `roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of roles

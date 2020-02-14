@@ -31327,7 +31327,7 @@ __webpack_require__(/*! datatables.net-bs4 */ "./node_modules/datatables.net-bs4
 
 __webpack_require__(/*! datatables.net-buttons-bs4 */ "./node_modules/datatables.net-buttons-bs4/js/buttons.bootstrap4.js");
 
-var swal = window.swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js"); // TO FOLDER PUBLIC WEBPACK
+swal = window.swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js"); // TO FOLDER PUBLIC WEBPACK
 // require( '../../public/webpack/js/coreui.min.js');
 // require( '../../public/webpack/js/custom-tooltips.min.js');
 

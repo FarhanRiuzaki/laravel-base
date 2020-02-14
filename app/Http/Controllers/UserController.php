@@ -117,12 +117,12 @@ class UserController extends Controller
                 ->join('permissions', 'role_has_permissions.permission_id', '=', 'permissions.id')
                 ->where('role_id', $getRole->id)->get()->pluck('name')->all();
             
-            if($getRole->id == '99'){
-                $permissions = Permission::whereNotIn('id', [2,3,4,5])->pluck('name');
-            }else{
+            // if($getRole->id == '99'){
+            //     $permissions = Permission::whereNotIn('id', [2,3,4,5])->pluck('name');
+            // }else{
                 //Mengambil data permission
                 $permissions = Permission::all()->pluck('name');
-            }
+            // }
         }
         return view('users.role_permission', compact('roles', 'permissions', 'hasPermission'));
     }
