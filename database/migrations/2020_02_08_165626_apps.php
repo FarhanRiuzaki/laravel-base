@@ -13,6 +13,7 @@ class Apps extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('apps');
         Schema::create('apps', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
