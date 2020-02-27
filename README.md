@@ -10,9 +10,10 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 #1 Clone Repository
 
-- git clone https://github.com/FarhanRiuzaki/laravel-base.git
-- cp .env.example .env
-
+```bash
+git clone https://github.com/FarhanRiuzaki/laravel-base.git
+cp .env.example .env
+```
 #2 Open .ENV
 
 ```bash
@@ -46,9 +47,10 @@ CREATE TABLE `apps` (
 
 #4 Artisan
 
-- composer install 
-- php artisan migrate
-
+```bash
+composer install 
+php artisan migrate
+```
 #5 RUN IN SQL
 
 ```bash
@@ -71,6 +73,13 @@ CREATE TABLE `apps` (
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+
+-- ----------------------------
+-- Records of apps
+-- ----------------------------
+BEGIN;
+INSERT INTO `apps` VALUES (2, 'Laravel Base', 'Exsclusive Dashboard', '1581325239laravel-base.jpg', '1581325634laravel-base.png', '1581326170laravel-base.png', '2020-02-08 21:32:08', '2020-02-10 16:16:10');
+COMMIT;
 
 -- ----------------------------
 -- Records of model_has_roles
@@ -121,6 +130,17 @@ BEGIN;
 INSERT INTO `users` VALUES (2, 'Administrator', 'admin@email.com', NULL, '$2y$10$iT79gWz9IU7QuG/wxuhNteROMwb1s9o3yVZREWC.KbB5DOZNUVW8i', 1, NULL, '2020-02-11 11:51:29', '2020-02-11 11:51:29');
 INSERT INTO `users` VALUES (5, 'Farhan Riuzaki', 'admin@gmail.com', NULL, '$2y$10$Jn7jqNPLzI2As3cBehD61ORDUYRUnNo2lQrBjiBDyLrZlUv3M0LaC', 1, NULL, '2020-02-11 13:24:40', '2020-02-11 13:24:40');
 COMMIT;
+```
+
+#6 Add key generate
+```bash
+php artisan key:generate
+```
+
+#link storage
+
+```bash
+php artisan storage:link
 ```
 
 ## Security Vulnerabilities
