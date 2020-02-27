@@ -10,24 +10,26 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 #1 Clone Repository
 
--git clone https://github.com/FarhanRiuzaki/laravel-base.git
-
--cp .env.example .env
+- git clone https://github.com/FarhanRiuzaki/laravel-base.git
+- cp .env.example .env
 
 #2 Open .ENV
 
-DB_CONNECTION=mysql 
+```bash
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1 
 DB_PORT=3306 
 DB_DATABASE=database_name 
 DB_USERNAME=root 
 DB_PASSWORD=password
+```
 
 #3 Database
 
--create database
--create apps table
+- create database
+- create apps table
 
+```bash
 DROP TABLE IF EXISTS `apps`;
 CREATE TABLE `apps` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -40,14 +42,16 @@ CREATE TABLE `apps` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
 
 #4 Artisan
 
--composer install 
--php artisan migrate
+- composer install 
+- php artisan migrate
 
 #5 RUN IN SQL
 
+```bash
 /*
  Navicat Premium Data Transfer
 
@@ -117,8 +121,7 @@ BEGIN;
 INSERT INTO `users` VALUES (2, 'Administrator', 'admin@email.com', NULL, '$2y$10$iT79gWz9IU7QuG/wxuhNteROMwb1s9o3yVZREWC.KbB5DOZNUVW8i', 1, NULL, '2020-02-11 11:51:29', '2020-02-11 11:51:29');
 INSERT INTO `users` VALUES (5, 'Farhan Riuzaki', 'admin@gmail.com', NULL, '$2y$10$Jn7jqNPLzI2As3cBehD61ORDUYRUnNo2lQrBjiBDyLrZlUv3M0LaC', 1, NULL, '2020-02-11 13:24:40', '2020-02-11 13:24:40');
 COMMIT;
-
-
+```
 
 ## Security Vulnerabilities
 
