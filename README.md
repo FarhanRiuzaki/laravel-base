@@ -137,7 +137,7 @@ COMMIT;
 php artisan key:generate
 ```
 
-#link storage
+#7 link storage
 
 ```bash
 php artisan storage:link
