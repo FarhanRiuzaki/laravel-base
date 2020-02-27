@@ -11,16 +11,23 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 #1 Clone Repository
 
 -git clone https://github.com/FarhanRiuzaki/laravel-base.git
+
 -cp .env.example .env
 
 #2 Open .ENV
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=database_name
+
 DB_USERNAME=root
+
 DB_PASSWORD=password
+
 
 #3 Database
 
