@@ -143,6 +143,12 @@ php artisan key:generate
 php artisan storage:link
 ```
 
+user untuk login:
+```bash
+    username: admin@gmail.com
+    password: admin123
+```
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [riuzakif@gmail.com](mailto:riuzakif@gmail.com). All security vulnerabilities will be promptly addressed.
