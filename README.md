@@ -16,25 +16,34 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 #2 Open .ENV
 
-DB_CONNECTION=mysql
-
-DB_HOST=127.0.0.1
-
-DB_PORT=3306
-
-DB_DATABASE=database_name
-
-DB_USERNAME=root
-
+DB_CONNECTION=mysql 
+DB_HOST=127.0.0.1 
+DB_PORT=3306 
+DB_DATABASE=database_name 
+DB_USERNAME=root 
 DB_PASSWORD=password
-
 
 #3 Database
 
 -create database
+-create apps table
+
+DROP TABLE IF EXISTS `apps`;
+CREATE TABLE `apps` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_login` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_header` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 #4 Artisan
 
+-composer install 
 -php artisan migrate
 
 #5 RUN IN SQL
